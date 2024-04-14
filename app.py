@@ -3,6 +3,7 @@ import os
 import numpy as np
 from werkzeug.utils import secure_filename
 from model.utils import main
+from model.models.convnet import ConvNet
 
 UPLOAD_FOLDER = os.path.join('static','uploads')
 ALLOWED_EXTENSIONS = {'jpg' ,'png','jpeg'}
