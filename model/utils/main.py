@@ -30,12 +30,12 @@ def preprocess(input_image):
 
 def CV2plt(cv_img):
     b,g,r = cv2.split(cv_img)
-    plt_img = cv2.merge([r,g,b]).astype(np.int)
+    plt_img = cv2.merge([r,g,b]).astype(int)
     return plt_img
 
 def identify_landmarks(path, tensor, prediction):
     batch, height, width = tensor.shape
-    batch_img = np.zeros((height, width * batch, 3), np.int)
+    batch_img = np.zeros((height, width * batch, 3),int)
     coord = []
 
     for i in range(batch):
